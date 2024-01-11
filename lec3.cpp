@@ -39,6 +39,17 @@ long long int pow(int n, int num = 2)
     return num * pow((n - 1), num);
 }
 
+
+//sum of square of N numbers
+int sqrn(int n)
+{
+    if(n == 0)
+        return 0;
+    if(n == 1)
+        return 1;
+    return (n * n) + sqrn((n - 1));
+}
+
 int main()
 {
     int n;
@@ -48,10 +59,12 @@ int main()
         cout << "Factorial is not possible for negative value";
         return 0;
     }
-//    cout << fact(n);
+    cout << "factorial is : " << fact(n) << nline;
 
-//    cout << sum(n) << nline;
-    cout << pow(n);
+    cout << "Sum is : " << sum(n) << nline;
+    cout << "Power is : " << pow(n) << nline;
+
+    cout << "Square sum is : " << sqrn(n) << nline;
     return 0;
 
 }
